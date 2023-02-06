@@ -24,8 +24,8 @@ export default function Home({posts}){
       
       
       {posts.map((post) => (
-        <div key={post.id}>
-          <div style={{display:'flex', backgroundColor:'white', color:'black', marginBottom:30, marginRight:200, marginLeft:30, borderRadius:10, paddingLeft:20}}>
+        <div key={post.id} style={{display:'flex', justifyContent:'center', alignContent:'center'}}>
+          <div style={{display:'flex', backgroundColor:'white', color:'black', borderRadius:10, paddingLeft: 20, margin: 10, flexDirection:'column',height:150, width: 500}}>
             <h2>{post.title}</h2>
           <p>{post.content}</p>
           </div>

@@ -9,9 +9,13 @@ export default function Home({posts}) {
   
   const handleSubmit = async (e) => {
   e.preventDefault()
+  try{
   const res = await axios.post('/api/posts', { title, content })
-    console.log(res.data) ;
-  }
+    console.log(res.data)} 
+    catch(e){
+        console.log(e)
+    }
+}
   
   return <div style={{display:'flex', justifyContent:'center', flexDirection:'column' , alignItems:'center'}}>
   <h1 >Write A Confession</h1>

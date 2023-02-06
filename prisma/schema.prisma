@@ -11,12 +11,9 @@ datasource db {
 }
 
 model Post {
-  id            Int      @id @default(autoincrement())
-  title         String
-  code          String   @db.Text
-  language      String
-  totalLikes    Int      @default(0)
-  totalComments Int      @default(0)
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  title     String  
+  content   String?  @db.Text
 }
